@@ -1,0 +1,23 @@
+<fakulta děkan="Dean Name">
+  <katedra zkratka_katedry="KI" webové_stránky="https://www.katedra1.cz">
+    <vedoucí>
+      <jméno>Head of Department 1</jméno>
+      <telefon>123456789</telefon>
+      <email>head@katedra1.cz</email>
+    </vedoucí>
+    <zaměstnanci>
+      <zaměstnanec>
+        <jméno>Employee 1</jméno>
+        <telefon>987654321</telefon>
+        <email>employee1@katedra1.cz</email>
+        <pozice><lektor></lektor></pozice>
+      </zaměstnanec>
+    </zaměstnanci>
+    <předměty>
+      <předmět zkratka="PR1" typ="přednáška">
+        <název>Subject 1</název>
+        <popis>Description of Subject 1</popis>
+      </předmět>
+    </předměty>
+  </katedra>
+</fakulta>
