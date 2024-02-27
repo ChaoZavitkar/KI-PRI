@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="studenti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kontaktni_udaje">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="email" type="xs:string"/>
+                    <xs:element name="telefon" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="jmeno" type="xs:string" use="required"/>
+            <xs:attribute name="prijmeni" type="xs:string" use="required"/>
+            <xs:attribute name="studentske_cislo" type="xs:string" use="required"/>
+            <xs:attribute name="fakulta" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

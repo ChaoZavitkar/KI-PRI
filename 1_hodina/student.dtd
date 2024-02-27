@@ -1,0 +1,10 @@
+<!ELEMENT studenti (student+)>
+<!ELEMENT student (kontaktni_udaje)>
+<!ATTLIST student
+          jmeno CDATA #REQUIRED
+          prijmeni CDATA #REQUIRED
+          studentske_cislo CDATA #REQUIRED
+          fakulta CDATA #REQUIRED>
+<!ELEMENT kontaktni_udaje (email, telefon)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>

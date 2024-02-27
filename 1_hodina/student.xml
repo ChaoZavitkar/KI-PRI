@@ -1,0 +1,14 @@
+<studenti>
+  <student jmeno="John" prijmeni="Smith" studentske_cislo="123456789" fakulta="Fakulta A">
+    <kontaktni_udaje>
+      <email>john.smith@univerzita.cz</email>
+      <telefon>123456789</telefon>
+    </kontaktni_udaje>
+  </student>
+  <student jmeno="Jane" prijmeni="Doe" studentske_cislo="987654321" fakulta="Fakulta B">
+    <kontaktni_udaje>
+      <email>jane.doe@univerzita.cz</email>
+      <telefon>987654321</telefon>
+    </kontaktni_udaje>
+  </student>
+</studenti>
