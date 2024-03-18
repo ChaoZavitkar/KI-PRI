@@ -19,20 +19,34 @@
 
     // Load and display the selected XML file using XSL
     if (isset($_GET['xmlFile'])) {
-        $selectedXml = new DOMDocument;
-        $selectedXml->load($_GET['xmlFile']);
+        $xmlFile = $_GET['xmlFile'];
+
+        // XML
+        $xml = new DOMDocument;
+        $xml->load($xmlFile);
 
         // XSL
         $xsl = new DOMDocument;
-        $xsl->load('xml/student.xsl');
+        $xsl->load('xml/cdcatalog.xsl');
 
-        // transformer
+        // Transformer
         $xslt = new XSLTProcessor();
         $xslt->importStylesheet($xsl);
-        $transformedXml = $xslt->transformToXml($selectedXml);
+        $transformedXml = $xslt->transformToXml($xml);
 
-        // output
+        // Output
         echo $transformedXml;
+    } else {
+        // Display the options to select XML files
+        $xmlFiles = glob('xml/*.xml');
+        echo '<form method="get" action="">';
+        echo '<select name="xmlFile">';
+        foreach ($xmlFiles as $file) {
+            echo '<option value="' . $file . '">' . $file . '</option>';
+        }
+        echo '</select>';
+        echo '<input type="submit" value="Display">';
+        echo '</form>';
     }
 ?>
 </body>
