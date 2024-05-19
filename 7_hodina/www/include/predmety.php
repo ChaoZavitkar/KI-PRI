@@ -1,17 +1,21 @@
 <?php
 
-function tabulkaPredmetu($kodPredmetu)
-{
-    $xml = new DOMDocument;
-    $xml->load('../xml/studium.xml');
+$kodPredmetu = $_POST['kodPredmetu'];
 
-    $xsl = new DOMDocument;
-    $xsl->load("../xml/studium-predmet.xsl");
-
-    $xslt = new XSLTProcessor();
-    $xslt->importStylesheet($xsl);
-
-    $xslt->setParameter('', 'kodPredmetu', $kodPredmetu);
-
-    return $xslt->transformToXml($xml);
+if (empty($kodPredmetu)) {
+    return;
 }
+
+
+$xml = new DOMDocument;
+$xml->load('./xml/studium.xml');
+
+$xsl = new DOMDocument;
+$xsl->load("./xml/studium-predmety.xsl");
+
+$xslt = new XSLTProcessor();
+$xslt->importStylesheet($xsl);
+
+$xslt->setParameter('', 'kodPredmetu', (string)$kodPredmetu);
+
+echo($xslt->transformToXml($xml));
