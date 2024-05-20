@@ -2,13 +2,11 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" indent="yes" />
 
-    <!-- Template to match the root element -->
     <xsl:template match="/">
         <html>
             <head>
                 <title>Character Sheets</title>
                 <style>
-                    /* Basic styling for the form */
                     table, th, td {
                         border: 1px solid black;
                         border-collapse: collapse;
@@ -44,14 +42,14 @@
                     </tr>
                     <xsl:for-each select="CharacterSheets/CharacterSheet">
                         <tr>
-                            <xsl:variable name="index" select="position()" />
-                            <td><xsl:value-of select="Name" /></td>
-                            <td><xsl:value-of select="Class" /></td>
-                            <td><xsl:value-of select="Level" /></td>
-                            <td><xsl:value-of select="Race" /></td>
-                            <td><xsl:value-of select="Background" /></td>
-                            <td><xsl:value-of select="Alignment" /></td>
-                            <td><xsl:value-of select="ExperiencePoints" /></td>
+                            <xsl:variable name="index" select="position() - 1" />
+                            <td><input type="text" name="name" value="{Name}" disabled="disabled" /></td>
+                            <td><input type="text" name="class" value="{Class}" disabled="disabled" /></td>
+                            <td><input type="number" name="level" value="{Level}" disabled="disabled" /></td>
+                            <td><input type="text" name="race" value="{Race}" disabled="disabled" /></td>
+                            <td><input type="text" name="background" value="{Background}" disabled="disabled" /></td>
+                            <td><input type="text" name="alignment" value="{Alignment}" disabled="disabled" /></td>
+                            <td><input type="number" name="experiencePoints" value="{ExperiencePoints}" disabled="disabled" /></td>
                             <td>
                                 <xsl:value-of select="Attributes/Strength" />, 
                                 <xsl:value-of select="Attributes/Dexterity" />, 
@@ -93,9 +91,9 @@
                                 <xsl:value-of select="HitPoints/Current" />, 
                                 <xsl:value-of select="HitPoints/Temporary" />
                             </td>
-                            <td><xsl:value-of select="ArmorClass" /></td>
-                            <td><xsl:value-of select="Initiative" /></td>
-                            <td><xsl:value-of select="Speed" /></td>
+                            <td><input type="number" name="armorClass" value="{ArmorClass}" disabled="disabled" /></td>
+                            <td><input type="number" name="initiative" value="{Initiative}" disabled="disabled" /></td>
+                            <td><input type="number" name="speed" value="{Speed}" disabled="disabled" /></td>
                             <td>
                                 <xsl:for-each select="Equipment/Item">
                                     <xsl:value-of select="Name" /> (<xsl:value-of select="Quantity" />), 
@@ -109,11 +107,14 @@
                             <td>
                                 <form id="deleteForm{$index}" method="post" action="deleteChar.php" style="display:inline;">
                                     <input type="hidden" name="index" value="{$index}" />
-                                    <button type="button" onclick="deleteCharacter({$index})">Delete</button>
+                                    <button type="button">Delete</button>
                                 </form>
                                 <form id="editForm{$index}" method="post" action="editChar.php" style="display:inline;">
                                     <input type="hidden" name="index" value="{$index}" />
-                                    <button type="button" onclick="editCharacter({$index})">Edit</button>
+                                    <xsl:for-each select="*[self::Name or self::Class or self::Level or self::Race or self::Background or self::Alignment or self::ExperiencePoints or self::ArmorClass or self::Initiative or self::Speed]">
+                                        <input type="hidden" name="{local-name()}" value="{.}" />
+                                    </xsl:for-each>
+                                    <button type="button">Edit</button>
                                     <button type="submit" style="display:none;">Save</button>
                                 </form>
                             </td>

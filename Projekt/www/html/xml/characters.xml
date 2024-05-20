@@ -3,8 +3,8 @@
 <CharacterSheets>
 
     <CharacterSheet>
-        <Name>Gandalf</Name>
-        <Class>Wizard</Class>
+        <Name>CharacterName</Name>
+        <Class>CharacterClass</Class>
         <Level>10</Level>
         <Race>Maia</Race>
         <Background>Sage</Background>
@@ -94,8 +94,8 @@
         </Spells>
     </CharacterSheet>
 <CharacterSheet>
-        <Name>Elara</Name>
-        <Class>Sorcerer</Class>
+        <Name/>
+        <Class/>
         <Level>5</Level>
         <Race>Elf</Race>
         <Background>Sage</Background>
