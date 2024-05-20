@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="spells.xsd">
+    <Spell>
+        <Name>Fireball</Name>
+        <Level>3</Level>
+        <Prepared>true</Prepared>
+    </Spell>
+    <Spell>
+        <Name>Shield</Name>
+        <Level>1</Level>
+        <Prepared>true</Prepared>
+    </Spell>
+    <Spell>
+        <Name>Magic Missile</Name>
+        <Level>1</Level>
+        <Prepared>true</Prepared>
+    </Spell>
+    <Spell>
+        <Name>Hunter's Mark</Name>
+        <Level>1</Level>
+        <Prepared>true</Prepared>
+    </Spell>
+    <Spell>
+        <Name>Goodberry</Name>
+        <Level>1</Level>
+        <Prepared>false</Prepared>
+    </Spell>
+</Spells>

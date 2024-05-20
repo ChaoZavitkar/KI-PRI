@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="spells"
+           xmlns="spells"
+           elementFormDefault="qualified">
+    
+    <xs:element name="Spells">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Spell" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Level" type="xs:integer"/>
+                            <xs:element name="Prepared" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

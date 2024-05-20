@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Equipment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="equipment.xsd">
+    <Item>
+        <Name>Longsword</Name>
+        <Quantity>1</Quantity>
+    </Item>
+    <Item>
+        <Name>Shortbow</Name>
+        <Quantity>1</Quantity>
+    </Item>
+    <Item>
+        <Name>Arrows</Name>
+        <Quantity>20</Quantity>
+    </Item>
+    <Item>
+        <Name>Leather Armor</Name>
+        <Quantity>1</Quantity>
+    </Item>
+    <Item>
+        <Name>Staff</Name>
+        <Quantity>1</Quantity>
+    </Item>
+    <Item>
+        <Name>Spellbook</Name>
+        <Quantity>1</Quantity>
+    </Item>
+    <Item>
+        <Name>Robes</Name>
+        <Quantity>1</Quantity>
+    </Item>
+</Equipment>
