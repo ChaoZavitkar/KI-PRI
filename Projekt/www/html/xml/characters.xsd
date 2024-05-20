@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="CharacterSheets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CharacterSheet" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Class" type="xs:string"/>
+                            <xs:element name="Level" type="xs:integer"/>
+                            <xs:element name="Race" type="xs:string"/>
+                            <xs:element name="Background" type="xs:string"/>
+                            <xs:element name="Alignment" type="xs:string"/>
+                            <xs:element name="ExperiencePoints" type="xs:integer"/>
+                            
+                            <xs:element name="Attributes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Strength" type="xs:integer"/>
+                                        <xs:element name="Dexterity" type="xs:integer"/>
+                                        <xs:element name="Constitution" type="xs:integer"/>
+                                        <xs:element name="Intelligence" type="xs:integer"/>
+                                        <xs:element name="Wisdom" type="xs:integer"/>
+                                        <xs:element name="Charisma" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="Skills">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Acrobatics" type="xs:integer"/>
+                                        <xs:element name="AnimalHandling" type="xs:integer"/>
+                                        <xs:element name="Arcana" type="xs:integer"/>
+                                        <xs:element name="Athletics" type="xs:integer"/>
+                                        <xs:element name="Deception" type="xs:integer"/>
+                                        <xs:element name="History" type="xs:integer"/>
+                                        <xs:element name="Insight" type="xs:integer"/>
+                                        <xs:element name="Intimidation" type="xs:integer"/>
+                                        <xs:element name="Investigation" type="xs:integer"/>
+                                        <xs:element name="Medicine" type="xs:integer"/>
+                                        <xs:element name="Nature" type="xs:integer"/>
+                                        <xs:element name="Perception" type="xs:integer"/>
+                                        <xs:element name="Performance" type="xs:integer"/>
+                                        <xs:element name="Persuasion" type="xs:integer"/>
+                                        <xs:element name="Religion" type="xs:integer"/>
+                                        <xs:element name="SleightOfHand" type="xs:integer"/>
+                                        <xs:element name="Stealth" type="xs:integer"/>
+                                        <xs:element name="Survival" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="SavingThrows">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="StrengthSave" type="xs:integer"/>
+                                        <xs:element name="DexteritySave" type="xs:integer"/>
+                                        <xs:element name="ConstitutionSave" type="xs:integer"/>
+                                        <xs:element name="IntelligenceSave" type="xs:integer"/>
+                                        <xs:element name="WisdomSave" type="xs:integer"/>
+                                        <xs:element name="CharismaSave" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="HitPoints">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Maximum" type="xs:integer"/>
+                                        <xs:element name="Current" type="xs:integer"/>
+                                        <xs:element name="Temporary" type="xs:integer" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="ArmorClass" type="xs:integer"/>
+                            <xs:element name="Initiative" type="xs:integer"/>
+                            <xs:element name="Speed" type="xs:integer"/>
+                            
+                            <xs:element name="Equipment">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Item" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Name" type="xs:string"/>
+                                                    <xs:element name="Quantity" type="xs:integer"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="Spells">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Spell" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Name" type="xs:string"/>
+                                                    <xs:element name="Level" type="xs:integer"/>
+                                                    <xs:element name="Prepared" type="xs:boolean"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

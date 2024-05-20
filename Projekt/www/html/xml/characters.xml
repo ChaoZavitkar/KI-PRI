@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="characters.xsl"?>
+<CharacterSheets>
+    <CharacterSheet>
+        <Name>Aragorn</Name>
+        <Class>Ranger</Class>
+        <Level>5</Level>
+        <Race>Human</Race>
+        <Background>Outlander</Background>
+        <Alignment>Chaotic Good</Alignment>
+        <ExperiencePoints>6500</ExperiencePoints>
+        
+        <Attributes>
+            <Strength>16</Strength>
+            <Dexterity>14</Dexterity>
+            <Constitution>15</Constitution>
+            <Intelligence>12</Intelligence>
+            <Wisdom>13</Wisdom>
+            <Charisma>10</Charisma>
+        </Attributes>
+        
+        <Skills>
+            <Acrobatics>2</Acrobatics>
+            <AnimalHandling>3</AnimalHandling>
+            <Arcana>1</Arcana>
+            <Athletics>5</Athletics>
+            <Deception>0</Deception>
+            <History>1</History>
+            <Insight>1</Insight>
+            <Intimidation>0</Intimidation>
+            <Investigation>1</Investigation>
+            <Medicine>1</Medicine>
+            <Nature>2</Nature>
+            <Perception>3</Perception>
+            <Performance>0</Performance>
+            <Persuasion>0</Persuasion>
+            <Religion>1</Religion>
+            <SleightOfHand>2</SleightOfHand>
+            <Stealth>2</Stealth>
+            <Survival>3</Survival>
+        </Skills>
+        
+        <SavingThrows>
+            <StrengthSave>3</StrengthSave>
+            <DexteritySave>2</DexteritySave>
+            <ConstitutionSave>2</ConstitutionSave>
+            <IntelligenceSave>1</IntelligenceSave>
+            <WisdomSave>1</WisdomSave>
+            <CharismaSave>0</CharismaSave>
+        </SavingThrows>
+        
+        <HitPoints>
+            <Maximum>38</Maximum>
+            <Current>30</Current>
+            <Temporary>0</Temporary>
+        </HitPoints>
+        
+        <ArmorClass>15</ArmorClass>
+        <Initiative>2</Initiative>
+        <Speed>30</Speed>
+        
+        <Equipment>
+            <Item>
+                <Name>Longsword</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Shortbow</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Arrows</Name>
+                <Quantity>20</Quantity>
+            </Item>
+            <Item>
+                <Name>Leather Armor</Name>
+                <Quantity>1</Quantity>
+            </Item>
+        </Equipment>
+        
+        <Spells>
+            <Spell>
+                <Name>Hunter's Mark</Name>
+                <Level>1</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+            <Spell>
+                <Name>Goodberry</Name>
+                <Level>1</Level>
+                <Prepared>false</Prepared>
+            </Spell>
+        </Spells>
+    </CharacterSheet>
+
+    <CharacterSheet>
+        <Name>Gandalf</Name>
+        <Class>Wizard</Class>
+        <Level>10</Level>
+        <Race>Maia</Race>
+        <Background>Sage</Background>
+        <Alignment>Neutral Good</Alignment>
+        <ExperiencePoints>42000</ExperiencePoints>
+        
+        <Attributes>
+            <Strength>10</Strength>
+            <Dexterity>14</Dexterity>
+            <Constitution>12</Constitution>
+            <Intelligence>18</Intelligence>
+            <Wisdom>15</Wisdom>
+            <Charisma>14</Charisma>
+        </Attributes>
+        
+        <Skills>
+            <Acrobatics>2</Acrobatics>
+            <AnimalHandling>1</AnimalHandling>
+            <Arcana>8</Arcana>
+            <Athletics>0</Athletics>
+            <Deception>2</Deception>
+            <History>8</History>
+            <Insight>3</Insight>
+            <Intimidation>2</Intimidation>
+            <Investigation>8</Investigation>
+            <Medicine>3</Medicine>
+            <Nature>4</Nature>
+            <Perception>3</Perception>
+            <Performance>2</Performance>
+            <Persuasion>2</Persuasion>
+            <Religion>8</Religion>
+            <SleightOfHand>2</SleightOfHand>
+            <Stealth>2</Stealth>
+            <Survival>1</Survival>
+        </Skills>
+        
+        <SavingThrows>
+            <StrengthSave>0</StrengthSave>
+            <DexteritySave>2</DexteritySave>
+            <ConstitutionSave>1</ConstitutionSave>
+            <IntelligenceSave>8</IntelligenceSave>
+            <WisdomSave>3</WisdomSave>
+            <CharismaSave>2</CharismaSave>
+        </SavingThrows>
+        
+        <HitPoints>
+            <Maximum>60</Maximum>
+            <Current>50</Current>
+            <Temporary>5</Temporary>
+        </HitPoints>
+        
+        <ArmorClass>12</ArmorClass>
+        <Initiative>2</Initiative>
+        <Speed>30</Speed>
+        
+        <Equipment>
+            <Item>
+                <Name>Staff</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Spellbook</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Robes</Name>
+                <Quantity>1</Quantity>
+            </Item>
+        </Equipment>
+        
+        <Spells>
+            <Spell>
+                <Name>Fireball</Name>
+                <Level>3</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+            <Spell>
+                <Name>Mage Hand</Name>
+                <Level>0</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+            <Spell>
+                <Name>Shield</Name>
+                <Level>1</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+        </Spells>
+    </CharacterSheet>
+</CharacterSheets>
