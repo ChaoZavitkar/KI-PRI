@@ -13,8 +13,8 @@ if (isset($_POST['index'])) {
         $characterSheet->parentNode->removeChild($characterSheet);
 
         $xmlData->save($xmlFilePath);
-        $dom = new DOMDocument();
-        $dom->load($xmlFilePath);
+        // $dom = new DOMDocument();
+        // $dom->load($xmlFilePath);
         echo 'Character deleted successfully.';
     } else {
         echo 'Character not found.';

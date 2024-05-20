@@ -93,4 +93,99 @@
             </Spell>
         </Spells>
     </CharacterSheet>
-</CharacterSheets>
+<CharacterSheet>
+        <Name>Elara</Name>
+        <Class>Sorcerer</Class>
+        <Level>5</Level>
+        <Race>Elf</Race>
+        <Background>Sage</Background>
+        <Alignment>Chaotic Neutral</Alignment>
+        <ExperiencePoints>15000</ExperiencePoints>
+
+        <Attributes>
+            <Strength>10</Strength>
+            <Dexterity>14</Dexterity>
+            <Constitution>12</Constitution>
+            <Intelligence>16</Intelligence>
+            <Wisdom>10</Wisdom>
+            <Charisma>18</Charisma>
+        </Attributes>
+
+        <Skills>
+            <Acrobatics>2</Acrobatics>
+            <AnimalHandling>0</AnimalHandling>
+            <Arcana>7</Arcana>
+            <Athletics>0</Athletics>
+            <Deception>6</Deception>
+            <History>3</History>
+            <Insight>2</Insight>
+            <Intimidation>4</Intimidation>
+            <Investigation>5</Investigation>
+            <Medicine>0</Medicine>
+            <Nature>1</Nature>
+            <Perception>2</Perception>
+            <Performance>5</Performance>
+            <Persuasion>6</Persuasion>
+            <Religion>3</Religion>
+            <SleightOfHand>2</SleightOfHand>
+            <Stealth>2</Stealth>
+            <Survival>1</Survival>
+        </Skills>
+
+        <SavingThrows>
+            <StrengthSave>0</StrengthSave>
+            <DexteritySave>4</DexteritySave>
+            <ConstitutionSave>1</ConstitutionSave>
+            <IntelligenceSave>3</IntelligenceSave>
+            <WisdomSave>0</WisdomSave>
+            <CharismaSave>7</CharismaSave>
+        </SavingThrows>
+
+        <HitPoints>
+            <Maximum>35</Maximum>
+            <Current>35</Current>
+            <Temporary>0</Temporary>
+        </HitPoints>
+
+        <ArmorClass>13</ArmorClass>
+        <Initiative>2</Initiative>
+        <Speed>30</Speed>
+
+        <Equipment>
+            <Item>
+                <Name>Quarterstaff</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Component Pouch</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Spellbook</Name>
+                <Quantity>1</Quantity>
+            </Item>
+            <Item>
+                <Name>Explorer's Pack</Name>
+                <Quantity>1</Quantity>
+            </Item>
+        </Equipment>
+
+        <Spells>
+            <Spell>
+                <Name>Mage Hand</Name>
+                <Level>0</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+            <Spell>
+                <Name>Fireball</Name>
+                <Level>3</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+            <Spell>
+                <Name>Lightning Bolt</Name>
+                <Level>3</Level>
+                <Prepared>true</Prepared>
+            </Spell>
+        </Spells>
+
+    </CharacterSheet></CharacterSheets>
