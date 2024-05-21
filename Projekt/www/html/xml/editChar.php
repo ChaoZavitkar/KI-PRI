@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $index = $_POST['index'];
     $index = (int)$index; // Convert index to integer
     if (!isset($xmlData->CharacterSheet[$index])) {
-        die('Invalid character index.');
+        die('Invalid character index.'.$index);
     }
 
     $characterSheet = $xmlData->CharacterSheet[$index];
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Failed to save XML file.');
     }
 
-    echo 'Character updated successfully.';
+    echo 'Character updated successfully.'.$index;
 } else {
     die('Invalid request method.');
 }
