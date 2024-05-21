@@ -3,9 +3,9 @@
 <CharacterSheets>
 
     <CharacterSheet>
-        <Name>CharacterName</Name>
-        <Class>CharacterClass</Class>
-        <Level>10</Level>
+        <Name>Gandalf</Name>
+        <Class>Wizard</Class>
+        <Level>13</Level>
         <Race>Maia</Race>
         <Background>Sage</Background>
         <Alignment>Neutral Good</Alignment>
@@ -94,8 +94,8 @@
         </Spells>
     </CharacterSheet>
 <CharacterSheet>
-        <Name/>
-        <Class/>
+        <Name>Legolas</Name>
+        <Class>Ranger</Class>
         <Level>5</Level>
         <Race>Elf</Race>
         <Background>Sage</Background>

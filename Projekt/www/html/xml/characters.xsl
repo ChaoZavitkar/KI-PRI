@@ -19,7 +19,7 @@
                 <script src="edit_delete.js"></script>
             </head>
             <body>
-                <h1>Character Sheets</h1>
+                <h1>Character Sheets LMAO</h1>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -43,13 +43,13 @@
                     <xsl:for-each select="CharacterSheets/CharacterSheet">
                         <tr>
                             <xsl:variable name="index" select="position() - 1" />
-                            <td><input type="text" name="name" value="{Name}" disabled="disabled" /></td>
-                            <td><input type="text" name="class" value="{Class}" disabled="disabled" /></td>
-                            <td><input type="number" name="level" value="{Level}" disabled="disabled" /></td>
-                            <td><input type="text" name="race" value="{Race}" disabled="disabled" /></td>
-                            <td><input type="text" name="background" value="{Background}" disabled="disabled" /></td>
-                            <td><input type="text" name="alignment" value="{Alignment}" disabled="disabled" /></td>
-                            <td><input type="number" name="experiencePoints" value="{ExperiencePoints}" disabled="disabled" /></td>
+                            <td><input type="text" name="Name" value="{Name}" disabled="disabled" /></td>
+                            <td><input type="text" name="Class" value="{Class}" disabled="disabled" /></td>
+                            <td><input type="number" name="Level" value="{Level}" disabled="disabled" /></td>
+                            <td><input type="text" name="Race" value="{Race}" disabled="disabled" /></td>
+                            <td><input type="text" name="Background" value="{Background}" disabled="disabled" /></td>
+                            <td><input type="text" name="Alignment" value="{Alignment}" disabled="disabled" /></td>
+                            <td><input type="number" name="ExperiencePoints" value="{ExperiencePoints}" disabled="disabled" /></td>
                             <td>
                                 <xsl:value-of select="Attributes/Strength" />, 
                                 <xsl:value-of select="Attributes/Dexterity" />, 
@@ -91,9 +91,9 @@
                                 <xsl:value-of select="HitPoints/Current" />, 
                                 <xsl:value-of select="HitPoints/Temporary" />
                             </td>
-                            <td><input type="number" name="armorClass" value="{ArmorClass}" disabled="disabled" /></td>
-                            <td><input type="number" name="initiative" value="{Initiative}" disabled="disabled" /></td>
-                            <td><input type="number" name="speed" value="{Speed}" disabled="disabled" /></td>
+                            <td><input type="number" name="ArmorClass" value="{ArmorClass}" disabled="disabled" /></td>
+                            <td><input type="number" name="Initiative" value="{Initiative}" disabled="disabled" /></td>
+                            <td><input type="number" name="Speed" value="{Speed}" disabled="disabled" /></td>
                             <td>
                                 <xsl:for-each select="Equipment/Item">
                                     <xsl:value-of select="Name" /> (<xsl:value-of select="Quantity" />), 
@@ -112,11 +112,12 @@
                                 <form id="editForm{$index}" method="post" action="editChar.php" style="display:inline;">
                                     <input type="hidden" name="index" value="{$index}" />
                                     <xsl:for-each select="*[self::Name or self::Class or self::Level or self::Race or self::Background or self::Alignment or self::ExperiencePoints or self::ArmorClass or self::Initiative or self::Speed]">
-                                        <input type="hidden" name="{local-name()}" value="{.}" />
+                                        <input type="text" name="{local-name()}" value="{.}" style="display:none;" />
                                     </xsl:for-each>
                                     <button type="button">Edit</button>
                                     <button type="submit" style="display:none;">Save</button>
                                 </form>
+
                             </td>
                         </tr>
                     </xsl:for-each>

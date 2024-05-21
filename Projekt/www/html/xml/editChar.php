@@ -1,45 +1,45 @@
 <?php
-$xmlFilePath = 'characters.xml';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Debugging: Log POST data
+    error_log(print_r($_POST, true));
 
-if (isset($_POST['index'])) {
-    $index = intval($_POST['index']);
-    echo 'Index received: ' . $index . '<br>'; // Debug statement
-
-    if (file_exists($xmlFilePath)) {
-        echo 'XML file found.<br>'; // Debug statement
-
-        // Load XML file
-        $xmlData = simplexml_load_file($xmlFilePath);
-
-        // Check if character sheet exists at the given index
-        if (isset($xmlData->CharacterSheet[$index])) {
-            echo 'Valid character index.<br>'; // Debug statement
-
-            // Update character fields here
-            $characterSheet = $xmlData->CharacterSheet[$index];
-            $fields = ['name' => 'Name', 'class' => 'Class', 'level' => 'Level', 'race' => 'Race', 'background' => 'Background', 'alignment' => 'Alignment', 'experiencePoints' => 'ExperiencePoints', 'armorClass' => 'ArmorClass', 'initiative' => 'Initiative', 'speed' => 'Speed'];
-
-            foreach ($fields as $postField => $xmlField) {
-                if (isset($_POST[$postField])) {
-                    $characterSheet->$xmlField = $_POST[$postField];
-                    echo 'Updated ' . $xmlField . ' with value: ' . $_POST[$postField] . '<br>'; // Debug statement
-                }
-            }
-
-            // Save XML data back to the file
-            $saved = $xmlData->asXML($xmlFilePath);
-            if ($saved !== false) {
-                echo 'Character updated successfully.';
-            } else {
-                echo 'Failed to save changes to XML file.';
-            }
-        } else {
-            echo 'Invalid character index.';
-        }
-    } else {
-        echo 'XML file not found.';
+    // Load XML file
+    $xmlFilePath = 'characters.xml';
+    if (!file_exists($xmlFilePath)) {
+        die('XML file not found.');
     }
+
+    $xmlData = simplexml_load_file($xmlFilePath);
+    if ($xmlData === false) {
+        die('Failed to load XML file.');
+    }
+
+    $index = $_POST['index'];
+    $index = (int)$index; // Convert index to integer
+    if (!isset($xmlData->CharacterSheet[$index])) {
+        die('Invalid character index.');
+    }
+
+    $characterSheet = $xmlData->CharacterSheet[$index];
+
+    // Update character fields here
+    $fields = ['Name', 'Class', 'Level', 'Race', 'Background', 'Alignment', 'ExperiencePoints', 'ArmorClass', 'Initiative', 'Speed'];
+
+    foreach ($fields as $field) {
+        if (isset($_POST[$field])) {
+            echo $_POST[$field]. '; ';
+            $characterSheet->$field = $_POST[$field];
+        }
+    }
+
+    // Save updated XML data
+    $saved = $xmlData->asXML($xmlFilePath);
+    if ($saved === false) {
+        die('Failed to save XML file.');
+    }
+
+    echo 'Character updated successfully.';
 } else {
-    echo 'No character index specified.';
+    die('Invalid request method.');
 }
 ?>
